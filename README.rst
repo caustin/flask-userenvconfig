@@ -1,5 +1,5 @@
-Flask-EnvConfig
-=================
+Flask-UserEnvConfig
+===================
 
 A flask config parser that allows the user to supply a set of required and optional
 configuration items.  These values can then be supplied by either the OS or shell's
@@ -19,7 +19,7 @@ Where the VARIABLE_NAME
 Setting Up Your Environment:
 ----------------------------
 
-You can use envconfig in two ways.
+You can use userenvconfig in two ways.
 
 * Set your environment variables at the OS / Shell level.
 * Create an '.env' file a hidden folder in your home folder.
@@ -37,7 +37,7 @@ Example Usage:
 --------------
 
     >>> from flask import Flask
-    >>> from flask.ext.envconfig import EnvConfig
+    >>> from flask.ext.userenvconfig import EnvConfig
     >>> app = Flask('foo')
     >>> config = EnvConfig(required=['MY_CONFIG_VARIABLE'], app=app)
 
