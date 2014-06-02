@@ -41,7 +41,7 @@ Example Usage:
     >>> app = Flask('foo')
     >>> config = MultiEnvConfig(required=['MY_CONFIG_VARIABLE'], app=app)
 
-Now all of the supplied config values is set up:
+Now all of the supplied config values are set up:
 
     >>> app.config.get("MY_CONFIG_VARIABLE")
 
