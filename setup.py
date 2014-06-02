@@ -7,7 +7,7 @@ from setuptools import setup
 
 setup(
     name="Flask-EnvConfig",
-    version='0.1.10',
+    version='0.1.11',
     url='https://github.com/caustin/flask-envconfig',
     download_url='https://github.com/caustin/flask-envconfig/archive/0.1.10.tar.gz',
     license='MIT',
