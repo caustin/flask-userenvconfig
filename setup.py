@@ -7,7 +7,7 @@ from setuptools import setup
 
 setup(
     name="Flask-MultiConfig",
-    version='1.0',
+    version='0.1.8',
     url='',
     license='MIT',
     author='Chris Austin',

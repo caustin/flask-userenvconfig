@@ -2,12 +2,13 @@ from itertools import chain
 from os import environ
 import os.path
 
+__version__ = '0.1.8'
+
 
 class MissingConfigException(Exception):
 
     def __init__(self, missing, app_name, config_path):
         m = ','.join(missing)
-        
 
         s = """Required enviroment variable(s) %s missing.
         Please set them using your operating system's or shell's syntax or
