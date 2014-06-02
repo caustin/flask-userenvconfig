@@ -1,0 +1,14 @@
+.env
+venv/
+.ropeproject/
+*.pyc
+stones.prof
+*.log
+.coverage
+.idea*
+local_settings.py
+atlassian-ide-plugin.xml
+_build*
+_static*
+_templates*
+*.sqlite
