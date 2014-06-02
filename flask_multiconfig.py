@@ -53,7 +53,6 @@ class MultiEnvConfig(object):
     def init_app(self, app):
         missing = []
         app_name = app.name
-        # try:
         self.parse_environ_file(app_name)
 
         for envar in chain(self.required, self.optional):
@@ -62,8 +61,6 @@ class MultiEnvConfig(object):
             else:
                 app.config.setdefault(envar, os.environ.get(envar))
 
-        # except Exception as ex:
-        #     raise ex
 
         if missing:
             raise MissingConfigException(missing, app.name, self.environ_file(app_name))
