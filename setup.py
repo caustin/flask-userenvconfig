@@ -11,7 +11,6 @@ setup(
     url='',
     license='MIT',
     author='Chris Austin',
-    author_email='chris@sydneysys.com',
     description='Configure a flask app with environment variables or a file.',
     long_description=__doc__,
     py_module=['flask_multiconfig'],
