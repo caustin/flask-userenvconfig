@@ -9,7 +9,7 @@ setup(
     name="Flask-MultiConfig",
     version='1.0',
     url='',
-    license='BSD',
+    license='MIT',
     author='Chris Austin',
     author_email='chris@sydneysys.com',
     description='Configure a flask app with environment variables or a file.',
