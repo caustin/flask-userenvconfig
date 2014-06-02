@@ -37,7 +37,7 @@ Example Usage:
 --------------
 
     >>> from flask import Flask
-    >>>from flask.ext.multiconfig import MultiEnvConfig
+    >>> from flask.ext.multiconfig import MultiEnvConfig
     >>> app = Flask('foo')
     >>> config = MultiEnvConfig(required=['MY_CONFIG_VARIABLE'], app=app)
 
