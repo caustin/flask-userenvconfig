@@ -7,8 +7,9 @@ from setuptools import setup
 
 setup(
     name="Flask-MultiConfig",
-    version='0.1.9',
+    version='0.1.10',
     url='https://github.com/caustin/flask-multiconfig',
+    download_url='https://github.com/caustin/flask-multiconfig/archive/0.1.10.tar.gz',
     license='MIT',
     author='Chris Austin',
     description='Configure a flask app with environment variables or a file.',

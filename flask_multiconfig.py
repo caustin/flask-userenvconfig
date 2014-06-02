@@ -1,7 +1,7 @@
 from itertools import chain
 import os
 
-__version__ = '0.1.9'
+__version__ = '0.1.10'
 
 
 class MissingConfigException(Exception):
