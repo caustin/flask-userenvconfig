@@ -6,15 +6,15 @@ at ~/<.appname>/.env.
 from setuptools import setup
 
 setup(
-    name="Flask-MultiConfig",
+    name="Flask-EnvConfig",
     version='0.1.10',
-    url='https://github.com/caustin/flask-multiconfig',
-    download_url='https://github.com/caustin/flask-multiconfig/archive/0.1.10.tar.gz',
+    url='https://github.com/caustin/flask-envconfig',
+    download_url='https://github.com/caustin/flask-envconfig/archive/0.1.10.tar.gz',
     license='MIT',
     author='Chris Austin',
     description='Configure a flask app with environment variables or a file.',
     long_description=__doc__,
-    py_module=['flask_multiconfig'],
+    py_module=['flask_envconfig'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

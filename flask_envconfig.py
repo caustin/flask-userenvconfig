@@ -20,7 +20,7 @@ class MissingConfigException(Exception):
         super(MissingConfigException, self).__init__(s)
 
 
-class MultiEnvConfig(object):
+class EnvConfig(object):
     """Multi environment configuration for flask
     """
 

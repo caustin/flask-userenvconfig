@@ -1,4 +1,4 @@
-Flask-MultiConfig
+Flask-EnvConfig
 =================
 
 A flask config parser that allows the user to supply a set of required and optional
@@ -19,9 +19,9 @@ Where the VARIABLE_NAME
 Setting Up Your Environment:
 ----------------------------
 
-You can use multiconfig in two ways.
+You can use envconfig in two ways.
 
-* Set your enviroment variables at the OS / Shell level.
+* Set your environment variables at the OS / Shell level.
 * Create an '.env' file a hidden folder in your home folder.
 
 Using an environment variable:
@@ -37,9 +37,9 @@ Example Usage:
 --------------
 
     >>> from flask import Flask
-    >>> from flask.ext.multiconfig import MultiEnvConfig
+    >>> from flask.ext.envconfig import EnvConfig
     >>> app = Flask('foo')
-    >>> config = MultiEnvConfig(required=['MY_CONFIG_VARIABLE'], app=app)
+    >>> config = EnvConfig(required=['MY_CONFIG_VARIABLE'], app=app)
 
 Now all of the supplied config values are set up:
 
@@ -47,7 +47,7 @@ Now all of the supplied config values are set up:
 
 Or using the factory / app_init() approach.
 
-    >>> config = MultiEnvConfig(required=['MY_CONFIG_VARIABLE'])
+    >>> config = EnvConfig(required=['MY_CONFIG_VARIABLE'])
     # Later in the app setup
     >>> config.init_app(app)
 
