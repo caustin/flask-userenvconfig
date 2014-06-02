@@ -1,6 +1,5 @@
 from itertools import chain
-from os import environ
-import os.path
+import os
 
 __version__ = '0.1.8'
 
@@ -26,6 +25,13 @@ class MultiEnvConfig(object):
     """
 
     def __init__(self, required, optional=None, app=None):
+        """
+        :param required: an iterable containing a 'list' of the environment
+                         variables required by the Flask application.
+        :param optional: an iterable containing a 'list' of the environment
+                         variables that are optional for th Flask application.
+        :param app: The flask application.
+        """
         self.required = required
 
         if optional is not None:
@@ -37,11 +43,28 @@ class MultiEnvConfig(object):
             self.init_app(app)
 
     def environ_file(self, app_name):
+        """Get the absolute path to the environment variable file.
+
+        :param app_name: The Flask Application's name.
+        :return: String representing the absolute path to the environment
+                 variable file.
+        """
         return os.path.abspath(
             os.path.join(os.path.expanduser("~"), ".%s" % app_name, '.env')
         )
 
     def parse_environ_file(self, app_name):
+        """Parses the environment variable file.
+
+        Assumes that the file is located in ~/.appname/.env
+        Assumes the format of the file is:
+
+        VAR=VALUE
+        VAR2=VALUE2
+
+        :param app_name: The Flask application's name.
+        :return: None
+        """
 
         f = self.environ_file(app_name)
         if os.path.isfile(f):
@@ -61,7 +84,6 @@ class MultiEnvConfig(object):
                 missing.append(envar)
             else:
                 app.config.setdefault(envar, os.environ.get(envar))
-
 
         if missing:
             raise MissingConfigException(missing, app.name, self.environ_file(app_name))
